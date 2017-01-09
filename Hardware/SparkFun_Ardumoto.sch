@@ -22942,14 +22942,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <sheets>
 <sheet>
 <plain>
-<wire x1="0" y1="106.68" x2="147.32" y2="106.68" width="0.2032" layer="95" style="longdash"/>
-<wire x1="147.32" y1="106.68" x2="147.32" y2="185.42" width="0.2032" layer="95" style="longdash"/>
-<wire x1="147.32" y1="106.68" x2="147.32" y2="35.56" width="0.2032" layer="95" style="longdash"/>
+<wire x1="0" y1="106.68" x2="147.32" y2="106.68" width="0.2032" layer="97" style="longdash"/>
+<wire x1="147.32" y1="106.68" x2="147.32" y2="185.42" width="0.2032" layer="97" style="longdash"/>
+<wire x1="147.32" y1="106.68" x2="147.32" y2="35.56" width="0.2032" layer="97" style="longdash"/>
 <text x="4.064" y="130.302" size="1.778" layer="95" font="vector" align="top-left">Power can be supplied through the Uno connection (not recommended), or by the
   screw/solder terminals on this shield.  When supplying from the shield, current flows
   back to power the Uno.  Only use one connection at a time.
 
-Max Vin voltage needs to be less than 18V</text>
+Vin range: 5V to 18V</text>
 <text x="238.76" y="7.62" size="2.54" layer="94" font="vector">v15</text>
 <text x="168.148" y="8.636" size="2.54" layer="94" font="vector" align="center-left">Revised by: Marshall Taylor</text>
 <text x="152.4" y="172.72" size="2.032" layer="97" font="vector" align="top-left">The folloing jumpers are used to set the ArduMoto's
@@ -22981,10 +22981,10 @@ JP4: 'B' PWM signal -- set to D9 (default) or D10</text>
 <instance part="J9" gate="G$1" x="35.56" y="165.1"/>
 <instance part="J10" gate="G$1" x="35.56" y="152.4"/>
 <instance part="GND6" gate="1" x="45.72" y="147.32"/>
-<instance part="FD1" gate="G$1" x="200.66" y="27.94"/>
-<instance part="FD2" gate="G$1" x="200.66" y="33.02"/>
-<instance part="H1" gate="G$1" x="208.28" y="33.02"/>
-<instance part="H2" gate="G$1" x="208.28" y="27.94"/>
+<instance part="FD1" gate="G$1" x="238.76" y="25.4"/>
+<instance part="FD2" gate="G$1" x="238.76" y="30.48"/>
+<instance part="H1" gate="G$1" x="243.84" y="30.48"/>
+<instance part="H2" gate="G$1" x="243.84" y="25.4"/>
 <instance part="U5" gate="G2" x="81.28" y="154.94"/>
 <instance part="U6" gate="G2" x="109.22" y="154.94"/>
 <instance part="SUPPLY2" gate="G$1" x="109.22" y="167.64"/>
@@ -23076,7 +23076,6 @@ JP4: 'B' PWM signal -- set to D9 (default) or D10</text>
 <wire x1="43.18" y1="50.8" x2="45.72" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="50.8" x2="45.72" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="GND14" gate="1" pin="GND"/>
-<junction x="45.72" y="53.34"/>
 <junction x="45.72" y="50.8"/>
 </segment>
 <segment>
@@ -23353,7 +23352,6 @@ JP4: 'B' PWM signal -- set to D9 (default) or D10</text>
 </net>
 <net name="D3" class="0">
 <segment>
-<label x="88.9" y="66.04" size="1.778" layer="95" font="vector"/>
 <pinref part="U1" gate="G$1" pin="*D3"/>
 <pinref part="J1" gate="G$1" pin="4"/>
 <wire x1="88.9" y1="66.04" x2="106.68" y2="66.04" width="0.1524" layer="91"/>
@@ -23485,10 +23483,10 @@ JP4: 'B' PWM signal -- set to D9 (default) or D10</text>
 </sheet>
 <sheet>
 <plain>
-<wire x1="160.02" y1="35.56" x2="160.02" y2="121.92" width="0.2032" layer="95" style="longdash"/>
-<wire x1="160.02" y1="121.92" x2="160.02" y2="185.42" width="0.2032" layer="95" style="longdash"/>
-<wire x1="160.02" y1="121.92" x2="248.92" y2="121.92" width="0.2032" layer="95" style="longdash"/>
-<wire x1="0" y1="35.56" x2="147.32" y2="35.56" width="0.2032" layer="95" style="longdash"/>
+<wire x1="160.02" y1="35.56" x2="160.02" y2="121.92" width="0.2032" layer="97" style="longdash"/>
+<wire x1="160.02" y1="121.92" x2="160.02" y2="185.42" width="0.2032" layer="97" style="longdash"/>
+<wire x1="160.02" y1="121.92" x2="248.92" y2="121.92" width="0.2032" layer="97" style="longdash"/>
+<wire x1="0" y1="35.56" x2="147.32" y2="35.56" width="0.2032" layer="97" style="longdash"/>
 <text x="238.76" y="7.62" size="2.54" layer="94" font="vector">v15</text>
 <text x="168.148" y="8.636" size="2.54" layer="94" font="vector" align="center-left">Revised by: Marshall Taylor</text>
 <text x="168.148" y="11.176" size="2.54" layer="94" font="vector">Pete Dokter</text>
@@ -23543,32 +23541,32 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 <instance part="GND9" gate="1" x="203.2" y="55.88" rot="MR0"/>
 <instance part="GND10" gate="1" x="195.58" y="55.88" rot="MR0"/>
 <instance part="GND11" gate="1" x="187.96" y="55.88" rot="MR0"/>
-<instance part="R1" gate="G$1" x="187.96" y="154.94" rot="R90"/>
+<instance part="R1" gate="G$1" x="185.42" y="154.94" rot="R90"/>
 <instance part="R2" gate="G$1" x="198.12" y="154.94" rot="R90"/>
-<instance part="R3" gate="G$1" x="213.36" y="154.94" rot="R90"/>
-<instance part="R4" gate="G$1" x="223.52" y="154.94" rot="R90"/>
-<instance part="LED1" gate="G$1" x="187.96" y="144.78"/>
+<instance part="R3" gate="G$1" x="215.9" y="154.94" rot="R90"/>
+<instance part="R4" gate="G$1" x="228.6" y="154.94" rot="R90"/>
+<instance part="LED1" gate="G$1" x="185.42" y="144.78"/>
 <instance part="LED3" gate="G$1" x="198.12" y="142.24" rot="R180"/>
-<instance part="D1" gate="G$1" x="210.82" y="86.36" smashed="yes" rot="MR90">
-<attribute name="NAME" x="212.852" y="83.82" size="1.778" layer="95" font="vector" rot="MR90"/>
+<instance part="D1" gate="G$1" x="213.36" y="86.36" smashed="yes" rot="MR90">
+<attribute name="NAME" x="215.392" y="83.82" size="1.778" layer="95" font="vector" rot="MR90"/>
 </instance>
 <instance part="D2" gate="G$1" x="210.82" y="63.5" smashed="yes" rot="MR90">
 <attribute name="NAME" x="212.852" y="60.96" size="1.778" layer="95" font="vector" rot="MR90"/>
 </instance>
-<instance part="D3" gate="G$1" x="203.2" y="86.36" smashed="yes" rot="MR90">
-<attribute name="NAME" x="205.232" y="83.82" size="1.778" layer="95" font="vector" rot="MR90"/>
+<instance part="D3" gate="G$1" x="205.74" y="86.36" smashed="yes" rot="MR90">
+<attribute name="NAME" x="207.772" y="83.82" size="1.778" layer="95" font="vector" rot="MR90"/>
 </instance>
 <instance part="D4" gate="G$1" x="203.2" y="63.5" smashed="yes" rot="MR90">
 <attribute name="NAME" x="205.232" y="60.96" size="1.778" layer="95" font="vector" rot="MR90"/>
 </instance>
-<instance part="D5" gate="G$1" x="195.58" y="86.36" smashed="yes" rot="MR90">
-<attribute name="NAME" x="197.612" y="83.82" size="1.778" layer="95" font="vector" rot="MR90"/>
+<instance part="D5" gate="G$1" x="198.12" y="86.36" smashed="yes" rot="MR90">
+<attribute name="NAME" x="200.152" y="83.82" size="1.778" layer="95" font="vector" rot="MR90"/>
 </instance>
 <instance part="D6" gate="G$1" x="195.58" y="63.5" smashed="yes" rot="MR90">
 <attribute name="NAME" x="197.612" y="60.96" size="1.778" layer="95" font="vector" rot="MR90"/>
 </instance>
-<instance part="D7" gate="G$1" x="187.96" y="86.36" smashed="yes" rot="MR90">
-<attribute name="NAME" x="189.992" y="83.82" size="1.778" layer="95" font="vector" rot="MR90"/>
+<instance part="D7" gate="G$1" x="190.5" y="86.36" smashed="yes" rot="MR90">
+<attribute name="NAME" x="192.532" y="83.82" size="1.778" layer="95" font="vector" rot="MR90"/>
 </instance>
 <instance part="D8" gate="G$1" x="187.96" y="63.5" smashed="yes" rot="MR90">
 <attribute name="NAME" x="189.992" y="60.96" size="1.778" layer="95" font="vector" rot="MR90"/>
@@ -23577,8 +23575,8 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 <instance part="U$1" gate="G$1" x="60.96" y="25.4"/>
 <instance part="LOGO1" gate="G$1" x="76.2" y="2.54"/>
 <instance part="LOGO2" gate="G$1" x="2.54" y="2.54"/>
-<instance part="LED2" gate="G$1" x="223.52" y="144.78"/>
-<instance part="LED4" gate="G$1" x="213.36" y="142.24" rot="R180"/>
+<instance part="LED2" gate="G$1" x="228.6" y="144.78"/>
+<instance part="LED4" gate="G$1" x="215.9" y="142.24" rot="R180"/>
 <instance part="GND19" gate="1" x="76.2" y="119.38"/>
 </instances>
 <busses>
@@ -23645,17 +23643,17 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 <wire x1="43.18" y1="139.7" x2="43.18" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="210.82" y1="88.9" x2="210.82" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="96.52" x2="203.2" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="96.52" x2="195.58" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="96.52" x2="187.96" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="96.52" x2="185.42" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="88.9" x2="203.2" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="88.9" x2="195.58" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="88.9" x2="187.96" y2="96.52" width="0.1524" layer="91"/>
-<junction x="203.2" y="96.52"/>
-<junction x="195.58" y="96.52"/>
-<junction x="187.96" y="96.52"/>
+<wire x1="213.36" y1="88.9" x2="213.36" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="96.52" x2="205.74" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="96.52" x2="198.12" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="96.52" x2="190.5" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="96.52" x2="185.42" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="88.9" x2="205.74" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="88.9" x2="198.12" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="88.9" x2="190.5" y2="96.52" width="0.1524" layer="91"/>
+<junction x="205.74" y="96.52"/>
+<junction x="198.12" y="96.52"/>
+<junction x="190.5" y="96.52"/>
 <pinref part="D1" gate="G$1" pin="C"/>
 <pinref part="D3" gate="G$1" pin="C"/>
 <pinref part="D5" gate="G$1" pin="C"/>
@@ -23734,10 +23732,12 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 <wire x1="228.6" y1="78.74" x2="226.06" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="78.74" x2="226.06" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="58.42" x2="228.6" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="78.74" x2="210.82" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="78.74" x2="213.36" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="78.74" x2="210.82" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="78.74" x2="182.88" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="66.04" x2="210.82" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="83.82" x2="210.82" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="83.82" x2="213.36" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="78.74" x2="210.82" y2="78.74" width="0.1524" layer="91"/>
 <junction x="226.06" y="78.74"/>
 <junction x="210.82" y="78.74"/>
 <label x="182.88" y="78.74" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
@@ -23745,17 +23745,17 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 <pinref part="J8" gate="G$1" pin="4"/>
 <pinref part="D2" gate="G$1" pin="C"/>
 <pinref part="D1" gate="G$1" pin="A"/>
+<junction x="213.36" y="78.74"/>
 </segment>
 <segment>
-<wire x1="187.96" y1="160.02" x2="187.96" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="162.56" x2="185.42" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="185.42" y1="162.56" x2="187.96" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="162.56" x2="198.12" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="160.02" x2="185.42" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="162.56" x2="185.42" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="162.56" x2="198.12" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="162.56" x2="198.12" y2="160.02" width="0.1524" layer="91"/>
-<label x="185.42" y="162.56" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<label x="182.88" y="162.56" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<junction x="187.96" y="162.56"/>
+<junction x="185.42" y="162.56"/>
 </segment>
 </net>
 <net name="OUT2" class="0">
@@ -23768,10 +23768,12 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 <wire x1="228.6" y1="76.2" x2="223.52" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="76.2" x2="223.52" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="55.88" x2="228.6" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="76.2" x2="203.2" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="76.2" x2="205.74" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="76.2" x2="203.2" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="76.2" x2="182.88" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="66.04" x2="203.2" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="83.82" x2="203.2" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="83.82" x2="205.74" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="76.2" x2="203.2" y2="76.2" width="0.1524" layer="91"/>
 <junction x="223.52" y="76.2"/>
 <junction x="203.2" y="76.2"/>
 <label x="182.88" y="76.2" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
@@ -23779,17 +23781,17 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 <pinref part="J8" gate="G$1" pin="3"/>
 <pinref part="D4" gate="G$1" pin="C"/>
 <pinref part="D3" gate="G$1" pin="A"/>
+<junction x="205.74" y="76.2"/>
 </segment>
 <segment>
-<wire x1="187.96" y1="139.7" x2="187.96" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="137.16" x2="185.42" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="185.42" y1="137.16" x2="187.96" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="137.16" x2="198.12" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="139.7" x2="185.42" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="137.16" x2="185.42" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="137.16" x2="198.12" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="137.16" x2="198.12" y2="139.7" width="0.1524" layer="91"/>
-<label x="185.42" y="137.16" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<label x="182.88" y="137.16" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <pinref part="LED3" gate="G$1" pin="A"/>
-<junction x="187.96" y="137.16"/>
+<junction x="185.42" y="137.16"/>
 </segment>
 </net>
 <net name="OUT4" class="0">
@@ -23802,10 +23804,12 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 <wire x1="228.6" y1="71.12" x2="218.44" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="71.12" x2="218.44" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="50.8" x2="228.6" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="71.12" x2="187.96" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="71.12" x2="190.5" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="71.12" x2="187.96" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="71.12" x2="182.88" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="66.04" x2="187.96" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="83.82" x2="187.96" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="83.82" x2="190.5" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="71.12" x2="187.96" y2="71.12" width="0.1524" layer="91"/>
 <junction x="218.44" y="71.12"/>
 <junction x="187.96" y="71.12"/>
 <label x="182.88" y="71.12" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
@@ -23813,17 +23817,17 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 <pinref part="J8" gate="G$1" pin="1"/>
 <pinref part="D8" gate="G$1" pin="C"/>
 <pinref part="D7" gate="G$1" pin="A"/>
+<junction x="190.5" y="71.12"/>
 </segment>
 <segment>
-<wire x1="213.36" y1="160.02" x2="213.36" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="162.56" x2="210.82" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="162.56" x2="213.36" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="162.56" x2="223.52" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="162.56" x2="223.52" y2="160.02" width="0.1524" layer="91"/>
-<label x="210.82" y="162.56" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="215.9" y1="160.02" x2="215.9" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="162.56" x2="215.9" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="162.56" x2="228.6" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="162.56" x2="228.6" y2="160.02" width="0.1524" layer="91"/>
+<label x="213.36" y="162.56" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="R4" gate="G$1" pin="2"/>
-<junction x="213.36" y="162.56"/>
+<junction x="215.9" y="162.56"/>
 </segment>
 </net>
 <net name="OUT3" class="0">
@@ -23836,10 +23840,12 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 <wire x1="228.6" y1="73.66" x2="220.98" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="73.66" x2="220.98" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="53.34" x2="228.6" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="73.66" x2="195.58" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="73.66" x2="198.12" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="73.66" x2="195.58" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="73.66" x2="182.88" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="66.04" x2="195.58" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="83.82" x2="195.58" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="83.82" x2="198.12" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="73.66" x2="195.58" y2="73.66" width="0.1524" layer="91"/>
 <junction x="220.98" y="73.66"/>
 <junction x="195.58" y="73.66"/>
 <label x="182.88" y="73.66" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
@@ -23847,14 +23853,15 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 <pinref part="J8" gate="G$1" pin="2"/>
 <pinref part="D6" gate="G$1" pin="C"/>
 <pinref part="D5" gate="G$1" pin="A"/>
+<junction x="198.12" y="73.66"/>
 </segment>
 <segment>
-<wire x1="213.36" y1="139.7" x2="213.36" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="137.16" x2="213.36" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="137.16" x2="223.52" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="137.16" x2="223.52" y2="139.7" width="0.1524" layer="91"/>
-<label x="210.82" y="137.16" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
-<junction x="213.36" y="137.16"/>
+<wire x1="215.9" y1="139.7" x2="215.9" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="137.16" x2="215.9" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="137.16" x2="228.6" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="137.16" x2="228.6" y2="139.7" width="0.1524" layer="91"/>
+<label x="213.36" y="137.16" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<junction x="215.9" y="137.16"/>
 <pinref part="LED2" gate="G$1" pin="C"/>
 <pinref part="LED4" gate="G$1" pin="A"/>
 </segment>
@@ -23906,7 +23913,7 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 <junction x="116.84" y="121.92"/>
 </segment>
 </net>
-<net name="N$14" class="0">
+<net name="SENA" class="0">
 <segment>
 <pinref part="JP9" gate="G$1" pin="1"/>
 <pinref part="U2" gate="G$1" pin="SENSE_A"/>
@@ -23914,7 +23921,7 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 <wire x1="53.34" y1="149.86" x2="53.34" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$11" class="0">
+<net name="SENB" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="SENSE_B"/>
 <wire x1="99.06" y1="149.86" x2="93.98" y2="149.86" width="0.1524" layer="91"/>
@@ -23938,7 +23945,7 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 </net>
 <net name="N$4" class="0">
 <segment>
-<wire x1="187.96" y1="149.86" x2="187.96" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="149.86" x2="185.42" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="LED1" gate="G$1" pin="A"/>
 </segment>
@@ -23952,14 +23959,14 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 </net>
 <net name="N$8" class="0">
 <segment>
-<wire x1="213.36" y1="149.86" x2="213.36" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="149.86" x2="215.9" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <pinref part="LED4" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
-<wire x1="223.52" y1="149.86" x2="223.52" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="149.86" x2="228.6" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 <pinref part="LED2" gate="G$1" pin="A"/>
 </segment>
