@@ -10622,11 +10622,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <packages>
 </packages>
 <symbols>
-<symbol name="5V">
-<description>&lt;h3&gt;5V Voltage Supply&lt;/h3&gt;</description>
+<symbol name="VCCIO">
+<description>&lt;h3&gt;VCC I/O Voltage Supply&lt;/h3&gt;</description>
 <wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<pin name="5V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+<pin name="VCCIO" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
 <text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
 </symbol>
 <symbol name="DGND">
@@ -10642,13 +10642,27 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="VIN" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
 <text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
 </symbol>
+<symbol name="3.3V">
+<description>&lt;h3&gt;3.3V Voltage Supply&lt;/h3&gt;</description>
+<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
+<pin name="3.3V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+</symbol>
+<symbol name="5V">
+<description>&lt;h3&gt;5V Voltage Supply&lt;/h3&gt;</description>
+<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
+<pin name="5V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="5V" prefix="SUPPLY">
-<description>&lt;h3&gt;5V Supply Symbol&lt;/h3&gt;
-&lt;p&gt;Power supply symbol for a specifically-stated 5V source.&lt;/p&gt;</description>
+<deviceset name="VCCIO" prefix="SUPPLY">
+<description>&lt;h3&gt;VCC I/O Supply&lt;/h3&gt;
+&lt;p&gt;Power supply for a chip's input and output pins.&lt;/p&gt;</description>
 <gates>
-<gate name="G$1" symbol="5V" x="0" y="0"/>
+<gate name="G$1" symbol="VCCIO" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -10677,6 +10691,34 @@ You are welcome to use this library for commercial purposes. For attribution, we
 &lt;p&gt;Generic voltage input supply symbol.&lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="VIN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="3.3V" prefix="SUPPLY">
+<description>&lt;h3&gt;3.3V Supply Symbol&lt;/h3&gt;
+&lt;p&gt;Power supply symbol for a specifically-stated 3.3V source.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="3.3V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="5V" prefix="SUPPLY">
+<description>&lt;h3&gt;5V Supply Symbol&lt;/h3&gt;
+&lt;p&gt;Power supply symbol for a specifically-stated 5V source.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="5V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -22899,9 +22941,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="JP2" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" value="31NCT"/>
 <part name="JP4" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" value="31NCT"/>
 <part name="J5" library="SparkFun-Connectors" deviceset="CONN_06" device="NO_SILK_FEMALE_PTH"/>
-<part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
-<part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
-<part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
+<part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="VCCIO" device=""/>
+<part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="VCCIO" device=""/>
+<part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="VCCIO" device=""/>
 <part name="J4" library="SparkFun-Connectors" deviceset="CONN_07" device="NO_SILK"/>
 <part name="GND14" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="JP5" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" value="2NCT"/>
@@ -22938,6 +22980,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="LED2" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603" value="Yellow"/>
 <part name="LED4" library="SparkFun-LED" deviceset="LED-BLUE" device="0603" value="BLUE"/>
 <part name="GND19" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="J15" library="SparkFun-Connectors" deviceset="CONN_02" device="1X02_NO_SILK"/>
+<part name="JP11" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" value="31NCT"/>
+<part name="SUPPLY8" library="SparkFun-PowerSymbols" deviceset="VCCIO" device=""/>
+<part name="SUPPLY9" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
+<part name="SUPPLY10" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -22946,7 +22993,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="160.02" y1="121.92" x2="160.02" y2="185.42" width="0.2032" layer="97" style="longdash"/>
 <wire x1="160.02" y1="121.92" x2="248.92" y2="121.92" width="0.2032" layer="97" style="longdash"/>
 <wire x1="0" y1="35.56" x2="147.32" y2="35.56" width="0.2032" layer="97" style="longdash"/>
-<text x="238.76" y="7.62" size="2.54" layer="94" font="vector">v15</text>
+<text x="238.76" y="7.62" size="2.54" layer="94" font="vector">v20</text>
 <text x="168.148" y="8.636" size="2.54" layer="94" font="vector" align="center-left">Revised by: Marshall Taylor</text>
 <text x="168.148" y="11.176" size="2.54" layer="94" font="vector">Pete Dokter</text>
 <text x="7.62" y="99.06" size="2.032" layer="97" font="vector" align="top-left">BREAKOUT PINS:
@@ -22980,7 +23027,7 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 <instance part="GND2" gate="1" x="96.52" y="124.46"/>
 <instance part="U5" gate="G1" x="15.24" y="121.92"/>
 <instance part="U6" gate="G1" x="139.7" y="139.7" rot="MR0"/>
-<instance part="SUPPLY1" gate="G$1" x="111.76" y="152.4"/>
+<instance part="SUPPLY1" gate="G$1" x="109.22" y="152.4"/>
 <instance part="JP5" gate="G$1" x="30.48" y="137.16"/>
 <instance part="JP8" gate="G$1" x="124.46" y="121.92"/>
 <instance part="J2" gate="G$1" x="40.64" y="165.1" rot="R270"/>
@@ -23124,12 +23171,12 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 <wire x1="185.42" y1="96.52" x2="185.42" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="5V" class="0">
+<net name="VCCIO" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="VSS"/>
-<pinref part="SUPPLY1" gate="G$1" pin="5V"/>
-<wire x1="93.98" y1="132.08" x2="111.76" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="132.08" x2="111.76" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="SUPPLY1" gate="G$1" pin="VCCIO"/>
+<wire x1="93.98" y1="132.08" x2="109.22" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="132.08" x2="109.22" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DIRA" class="0">
@@ -23445,7 +23492,7 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
   back to power the Uno.  Only use one connection at a time.
 
 Vin range: 5V to 18V</text>
-<text x="238.76" y="7.62" size="2.54" layer="94" font="vector">v15</text>
+<text x="238.76" y="7.62" size="2.54" layer="94" font="vector">v20</text>
 <text x="168.148" y="8.636" size="2.54" layer="94" font="vector" align="center-left">Revised by: Marshall Taylor</text>
 <text x="152.4" y="172.72" size="2.032" layer="97" font="vector" align="top-left">The folloing jumpers are used to set the ArduMoto's
   control pins to one of two possible connection
@@ -23466,34 +23513,34 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="V" x="147.32" y="0"/>
-<instance part="GND3" gate="1" x="109.22" y="142.24"/>
-<instance part="GND4" gate="1" x="81.28" y="142.24"/>
-<instance part="C1" gate="G$1" x="91.44" y="152.4"/>
-<instance part="GND5" gate="1" x="91.44" y="142.24" rot="MR0"/>
-<instance part="C3" gate="G$1" x="53.34" y="149.86"/>
-<instance part="GND7" gate="1" x="53.34" y="139.7"/>
-<instance part="C8" gate="G$1" x="119.38" y="152.4"/>
-<instance part="GND12" gate="1" x="119.38" y="142.24"/>
-<instance part="J9" gate="G$1" x="35.56" y="165.1"/>
-<instance part="J10" gate="G$1" x="35.56" y="152.4"/>
-<instance part="GND6" gate="1" x="45.72" y="147.32"/>
-<instance part="U5" gate="G2" x="81.28" y="154.94"/>
-<instance part="U6" gate="G2" x="109.22" y="154.94"/>
-<instance part="SUPPLY2" gate="G$1" x="109.22" y="167.64"/>
-<instance part="SUPPLY3" gate="G$1" x="81.28" y="167.64"/>
-<instance part="SUPPLY7" gate="G$1" x="66.04" y="157.48"/>
+<instance part="GND3" gate="1" x="121.92" y="142.24"/>
+<instance part="GND4" gate="1" x="93.98" y="142.24"/>
+<instance part="C1" gate="G$1" x="104.14" y="152.4"/>
+<instance part="GND5" gate="1" x="104.14" y="142.24" rot="MR0"/>
+<instance part="C3" gate="G$1" x="66.04" y="149.86"/>
+<instance part="GND7" gate="1" x="66.04" y="139.7"/>
+<instance part="C8" gate="G$1" x="132.08" y="152.4"/>
+<instance part="GND12" gate="1" x="132.08" y="142.24"/>
+<instance part="J9" gate="G$1" x="48.26" y="165.1"/>
+<instance part="J10" gate="G$1" x="48.26" y="152.4"/>
+<instance part="GND6" gate="1" x="58.42" y="147.32"/>
+<instance part="U5" gate="G2" x="93.98" y="154.94"/>
+<instance part="U6" gate="G2" x="121.92" y="154.94"/>
+<instance part="SUPPLY2" gate="G$1" x="121.92" y="167.64"/>
+<instance part="SUPPLY3" gate="G$1" x="93.98" y="167.64"/>
+<instance part="SUPPLY7" gate="G$1" x="78.74" y="157.48"/>
 <instance part="U1" gate="G$1" x="76.2" y="71.12"/>
 <instance part="GND13" gate="1" x="60.96" y="43.18"/>
 <instance part="J1" gate="G$1" x="111.76" y="78.74" rot="R180"/>
 <instance part="J3" gate="G$1" x="55.88" y="83.82" rot="MR180"/>
 <instance part="J5" gate="G$1" x="111.76" y="55.88" rot="R180"/>
-<instance part="J4" gate="G$1" x="38.1" y="63.5" rot="MR180"/>
-<instance part="GND14" gate="1" x="45.72" y="43.18"/>
-<instance part="SUPPLY6" gate="G$1" x="45.72" y="76.2"/>
-<instance part="JP3" gate="G$1" x="187.96" y="81.28" rot="MR0"/>
-<instance part="JP1" gate="G$1" x="187.96" y="116.84" rot="MR0"/>
-<instance part="JP2" gate="G$1" x="187.96" y="99.06" rot="R180"/>
-<instance part="JP4" gate="G$1" x="187.96" y="63.5" rot="R180"/>
+<instance part="J4" gate="G$1" x="20.32" y="63.5" rot="MR180"/>
+<instance part="GND14" gate="1" x="30.48" y="43.18"/>
+<instance part="SUPPLY6" gate="G$1" x="30.48" y="76.2"/>
+<instance part="JP3" gate="G$1" x="187.96" y="81.28" rot="R180"/>
+<instance part="JP1" gate="G$1" x="187.96" y="116.84" rot="R180"/>
+<instance part="JP2" gate="G$1" x="187.96" y="99.06" rot="MR0"/>
+<instance part="JP4" gate="G$1" x="187.96" y="63.5" rot="MR0"/>
 <instance part="D9" gate="G$1" x="213.36" y="55.88" rot="MR270"/>
 <instance part="D10" gate="G$1" x="213.36" y="91.44" rot="MR270"/>
 <instance part="D11" gate="G$1" x="213.36" y="109.22" rot="MR270"/>
@@ -23507,42 +23554,47 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <instance part="GND17" gate="1" x="220.98" y="104.14" rot="MR0"/>
 <instance part="GND18" gate="1" x="220.98" y="68.58" rot="MR0"/>
 <instance part="LOGO1" gate="G$1" x="2.54" y="2.54"/>
+<instance part="J15" gate="G$1" x="43.18" y="48.26"/>
+<instance part="JP11" gate="G$1" x="27.94" y="152.4" rot="R180"/>
+<instance part="SUPPLY8" gate="G$1" x="35.56" y="154.94"/>
+<instance part="SUPPLY9" gate="G$1" x="15.24" y="160.02"/>
+<instance part="SUPPLY10" gate="G$1" x="27.94" y="160.02"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="GND" class="0">
 <segment>
-<wire x1="81.28" y1="147.32" x2="81.28" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="147.32" x2="93.98" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <pinref part="U5" gate="G2" pin="P$V-"/>
 </segment>
 <segment>
-<wire x1="109.22" y1="144.78" x2="109.22" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="144.78" x2="121.92" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 <pinref part="U6" gate="G2" pin="P$V-"/>
 </segment>
 <segment>
-<wire x1="91.44" y1="149.86" x2="91.44" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="149.86" x2="104.14" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="53.34" y1="144.78" x2="53.34" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="144.78" x2="66.04" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="-"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="119.38" y1="149.86" x2="119.38" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="149.86" x2="132.08" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="C8" gate="G$1" pin="2"/>
 <pinref part="GND12" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="43.18" y1="165.1" x2="45.72" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="165.1" x2="45.72" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="152.4" x2="45.72" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="152.4" x2="45.72" y2="152.4" width="0.1524" layer="91"/>
-<junction x="45.72" y="152.4"/>
+<wire x1="55.88" y1="165.1" x2="58.42" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="165.1" x2="58.42" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="152.4" x2="58.42" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="152.4" x2="58.42" y2="152.4" width="0.1524" layer="91"/>
+<junction x="58.42" y="152.4"/>
 <pinref part="J9" gate="G$1" pin="1"/>
 <pinref part="J10" gate="G$1" pin="1"/>
 <pinref part="GND6" gate="1" pin="GND"/>
@@ -23560,16 +23612,21 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <pinref part="U1" gate="G$1" pin="GND@1"/>
 <pinref part="U1" gate="G$1" pin="GND@2"/>
 <pinref part="GND13" gate="1" pin="GND"/>
+<pinref part="J15" gate="G$1" pin="1"/>
+<wire x1="50.8" y1="48.26" x2="55.88" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="48.26" x2="55.88" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="53.34" x2="60.96" y2="53.34" width="0.1524" layer="91"/>
+<junction x="60.96" y="53.34"/>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="2"/>
-<wire x1="43.18" y1="66.04" x2="45.72" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="66.04" x2="45.72" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="66.04" x2="30.48" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="66.04" x2="30.48" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="J4" gate="G$1" pin="3"/>
-<wire x1="43.18" y1="63.5" x2="45.72" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="63.5" x2="45.72" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="63.5" x2="30.48" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="63.5" x2="30.48" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="GND14" gate="1" pin="GND"/>
-<junction x="45.72" y="63.5"/>
+<junction x="30.48" y="63.5"/>
 </segment>
 <segment>
 <pinref part="D9" gate="G$1" pin="C"/>
@@ -23598,58 +23655,58 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 </net>
 <net name="VIN" class="0">
 <segment>
-<wire x1="43.18" y1="167.64" x2="48.26" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="167.64" x2="48.26" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="154.94" x2="53.34" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="154.94" x2="66.04" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="154.94" x2="48.26" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="152.4" x2="53.34" y2="154.94" width="0.1524" layer="91"/>
-<junction x="48.26" y="154.94"/>
-<junction x="53.34" y="154.94"/>
+<wire x1="55.88" y1="167.64" x2="60.96" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="167.64" x2="60.96" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="154.94" x2="66.04" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="154.94" x2="78.74" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="154.94" x2="60.96" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="152.4" x2="66.04" y2="154.94" width="0.1524" layer="91"/>
+<junction x="60.96" y="154.94"/>
+<junction x="66.04" y="154.94"/>
 <pinref part="J9" gate="G$1" pin="2"/>
 <pinref part="J10" gate="G$1" pin="2"/>
 <pinref part="C3" gate="G$1" pin="+"/>
 <pinref part="SUPPLY7" gate="G$1" pin="VIN"/>
-<wire x1="66.04" y1="154.94" x2="66.04" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="154.94" x2="78.74" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="VIN"/>
 <pinref part="J4" gate="G$1" pin="1"/>
-<wire x1="43.18" y1="68.58" x2="45.72" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="68.58" x2="48.26" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="68.58" x2="48.26" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="63.5" x2="63.5" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="68.58" x2="30.48" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="68.58" x2="33.02" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="68.58" x2="33.02" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="63.5" x2="63.5" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="SUPPLY6" gate="G$1" pin="VIN"/>
-<wire x1="45.72" y1="68.58" x2="45.72" y2="76.2" width="0.1524" layer="91"/>
-<junction x="45.72" y="68.58"/>
+<wire x1="30.48" y1="68.58" x2="30.48" y2="76.2" width="0.1524" layer="91"/>
+<junction x="30.48" y="68.58"/>
 </segment>
 </net>
-<net name="5V" class="0">
+<net name="VCCIO" class="0">
 <segment>
-<wire x1="91.44" y1="157.48" x2="91.44" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="162.56" x2="81.28" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="165.1" x2="91.44" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="157.48" x2="104.14" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="162.56" x2="93.98" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="165.1" x2="104.14" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<pinref part="SUPPLY3" gate="G$1" pin="5V"/>
-<wire x1="81.28" y1="165.1" x2="81.28" y2="167.64" width="0.1524" layer="91"/>
+<pinref part="SUPPLY3" gate="G$1" pin="VCCIO"/>
+<wire x1="93.98" y1="165.1" x2="93.98" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="U5" gate="G2" pin="P$V+"/>
-<junction x="81.28" y="165.1"/>
+<junction x="93.98" y="165.1"/>
 </segment>
 <segment>
-<wire x1="119.38" y1="165.1" x2="109.22" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="165.1" x2="109.22" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="157.48" x2="119.38" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="165.1" x2="121.92" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="165.1" x2="121.92" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="157.48" x2="132.08" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="C8" gate="G$1" pin="1"/>
 <pinref part="U6" gate="G2" pin="P$V+"/>
-<pinref part="SUPPLY2" gate="G$1" pin="5V"/>
-<wire x1="109.22" y1="165.1" x2="109.22" y2="167.64" width="0.1524" layer="91"/>
-<junction x="109.22" y="165.1"/>
+<pinref part="SUPPLY2" gate="G$1" pin="VCCIO"/>
+<wire x1="121.92" y1="165.1" x2="121.92" y2="167.64" width="0.1524" layer="91"/>
+<junction x="121.92" y="165.1"/>
 </segment>
 <segment>
-<label x="55.88" y="60.96" size="1.27" layer="95" font="vector"/>
-<pinref part="U1" gate="G$1" pin="5V"/>
-<pinref part="J4" gate="G$1" pin="4"/>
-<wire x1="43.18" y1="60.96" x2="63.5" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="JP11" gate="G$1" pin="2"/>
+<wire x1="33.02" y1="152.4" x2="35.56" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="SUPPLY8" gate="G$1" pin="VCCIO"/>
+<wire x1="35.56" y1="152.4" x2="35.56" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
@@ -23657,7 +23714,14 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <label x="55.88" y="58.42" size="1.27" layer="95" font="vector"/>
 <pinref part="U1" gate="G$1" pin="3.3V"/>
 <pinref part="J4" gate="G$1" pin="5"/>
-<wire x1="43.18" y1="58.42" x2="63.5" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="58.42" x2="63.5" y2="58.42" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SUPPLY9" gate="G$1" pin="3.3V"/>
+<wire x1="15.24" y1="160.02" x2="15.24" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="144.78" x2="27.94" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="JP11" gate="G$1" pin="1"/>
+<wire x1="27.94" y1="144.78" x2="27.94" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D8" class="0">
@@ -23670,10 +23734,10 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <pinref part="J5" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="3"/>
-<wire x1="187.96" y1="111.76" x2="187.96" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="109.22" x2="182.88" y2="109.22" width="0.1524" layer="91"/>
 <label x="182.88" y="109.22" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
+<pinref part="JP1" gate="G$1" pin="1"/>
+<wire x1="187.96" y1="111.76" x2="187.96" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D7" class="0">
@@ -23684,10 +23748,10 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <label x="99.06" y="68.58" size="1.27" layer="95" font="vector"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="G$1" pin="3"/>
-<wire x1="187.96" y1="76.2" x2="187.96" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="73.66" x2="182.88" y2="73.66" width="0.1524" layer="91"/>
 <label x="182.88" y="73.66" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
+<pinref part="JP3" gate="G$1" pin="1"/>
+<wire x1="187.96" y1="76.2" x2="187.96" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D0" class="0">
@@ -23718,10 +23782,10 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <label x="99.06" y="81.28" size="1.27" layer="95" font="vector"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="G$1" pin="1"/>
-<wire x1="187.96" y1="86.36" x2="187.96" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="88.9" x2="182.88" y2="88.9" width="0.1524" layer="91"/>
-<label x="182.88" y="88.9" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
+<wire x1="187.96" y1="124.46" x2="182.88" y2="124.46" width="0.1524" layer="91"/>
+<label x="182.88" y="124.46" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
+<pinref part="JP1" gate="G$1" pin="3"/>
+<wire x1="187.96" y1="124.46" x2="187.96" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D4" class="0">
@@ -23730,6 +23794,12 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <pinref part="J1" gate="G$1" pin="5"/>
 <wire x1="88.9" y1="76.2" x2="106.68" y2="76.2" width="0.1524" layer="91"/>
 <label x="99.06" y="76.2" size="1.27" layer="95" font="vector"/>
+</segment>
+<segment>
+<wire x1="187.96" y1="88.9" x2="182.88" y2="88.9" width="0.1524" layer="91"/>
+<label x="182.88" y="88.9" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
+<pinref part="JP3" gate="G$1" pin="3"/>
+<wire x1="187.96" y1="88.9" x2="187.96" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$21" class="0">
@@ -23778,9 +23848,9 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <segment>
 <pinref part="U1" gate="G$1" pin="IOREF"/>
 <pinref part="J4" gate="G$1" pin="7"/>
-<wire x1="43.18" y1="53.34" x2="50.8" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="53.34" x2="50.8" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="68.58" x2="63.5" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="53.34" x2="35.56" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="53.34" x2="35.56" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="68.58" x2="63.5" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D6" class="0">
@@ -23790,12 +23860,6 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <pinref part="J1" gate="G$1" pin="7"/>
 <label x="99.06" y="71.12" size="1.27" layer="95" font="vector"/>
 </segment>
-<segment>
-<wire x1="187.96" y1="55.88" x2="182.88" y2="55.88" width="0.1524" layer="91"/>
-<label x="182.88" y="55.88" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
-<pinref part="JP4" gate="G$1" pin="1"/>
-<wire x1="187.96" y1="58.42" x2="187.96" y2="55.88" width="0.1524" layer="91"/>
-</segment>
 </net>
 <net name="D5" class="0">
 <segment>
@@ -23803,12 +23867,6 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <wire x1="88.9" y1="73.66" x2="106.68" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="6"/>
 <label x="99.06" y="73.66" size="1.27" layer="95" font="vector"/>
-</segment>
-<segment>
-<wire x1="187.96" y1="91.44" x2="182.88" y2="91.44" width="0.1524" layer="91"/>
-<label x="182.88" y="91.44" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
-<pinref part="JP2" gate="G$1" pin="1"/>
-<wire x1="187.96" y1="91.44" x2="187.96" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D10" class="0">
@@ -23823,7 +23881,7 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <segment>
 <wire x1="187.96" y1="71.12" x2="182.88" y2="71.12" width="0.1524" layer="91"/>
 <label x="182.88" y="71.12" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
-<pinref part="JP4" gate="G$1" pin="3"/>
+<pinref part="JP4" gate="G$1" pin="1"/>
 <wire x1="187.96" y1="71.12" x2="187.96" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -23839,7 +23897,7 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <segment>
 <wire x1="187.96" y1="106.68" x2="182.88" y2="106.68" width="0.1524" layer="91"/>
 <label x="182.88" y="106.68" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
-<pinref part="JP2" gate="G$1" pin="3"/>
+<pinref part="JP2" gate="G$1" pin="1"/>
 <wire x1="187.96" y1="106.68" x2="187.96" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -23851,10 +23909,10 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <label x="99.06" y="78.74" size="1.27" layer="95" font="vector"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="1"/>
-<wire x1="187.96" y1="121.92" x2="187.96" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="124.46" x2="182.88" y2="124.46" width="0.1524" layer="91"/>
-<label x="182.88" y="124.46" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
+<wire x1="187.96" y1="91.44" x2="182.88" y2="91.44" width="0.1524" layer="91"/>
+<label x="182.88" y="91.44" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
+<pinref part="JP2" gate="G$1" pin="3"/>
+<wire x1="187.96" y1="93.98" x2="187.96" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D11" class="0">
@@ -23865,6 +23923,12 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <label x="99.06" y="53.34" size="1.27" layer="95" font="vector"/>
 <pinref part="U1" gate="G$1" pin="*D11"/>
 <pinref part="J5" gate="G$1" pin="4"/>
+</segment>
+<segment>
+<wire x1="187.96" y1="55.88" x2="182.88" y2="55.88" width="0.1524" layer="91"/>
+<label x="182.88" y="55.88" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
+<pinref part="JP4" gate="G$1" pin="3"/>
+<wire x1="187.96" y1="58.42" x2="187.96" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D12" class="0">
@@ -23890,33 +23954,33 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <net name="RESET" class="0">
 <segment>
 <pinref part="J4" gate="G$1" pin="6"/>
-<wire x1="43.18" y1="55.88" x2="53.34" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="55.88" x2="53.34" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="55.88" x2="38.1" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="55.88" x2="38.1" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="RES"/>
-<wire x1="53.34" y1="66.04" x2="63.5" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="66.04" x2="63.5" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DIRA" class="0">
 <segment>
-<pinref part="JP1" gate="G$1" pin="2"/>
-<wire x1="193.04" y1="116.84" x2="195.58" y2="116.84" width="0.1524" layer="91"/>
 <label x="223.52" y="116.84" size="1.27" layer="95" font="vector" rot="MR180" xref="yes"/>
 <pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="195.58" y1="116.84" x2="223.52" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="109.22" x2="195.58" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="109.22" x2="195.58" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="G$1" pin="2"/>
+<wire x1="193.04" y1="116.84" x2="195.58" y2="116.84" width="0.1524" layer="91"/>
 <junction x="195.58" y="116.84"/>
 </segment>
 </net>
 <net name="DIRB" class="0">
 <segment>
-<pinref part="JP3" gate="G$1" pin="2"/>
-<wire x1="193.04" y1="81.28" x2="195.58" y2="81.28" width="0.1524" layer="91"/>
 <label x="223.52" y="81.28" size="1.27" layer="95" font="vector" rot="MR180" xref="yes"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="195.58" y1="81.28" x2="223.52" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="73.66" x2="195.58" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="73.66" x2="195.58" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="G$1" pin="2"/>
+<wire x1="193.04" y1="81.28" x2="195.58" y2="81.28" width="0.1524" layer="91"/>
 <junction x="195.58" y="81.28"/>
 </segment>
 </net>
@@ -23970,6 +24034,28 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <pinref part="D11" gate="G$1" pin="A"/>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="208.28" y1="109.22" x2="210.82" y2="109.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="AREF"/>
+<wire x1="63.5" y1="55.88" x2="53.34" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="55.88" x2="53.34" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="J15" gate="G$1" pin="2"/>
+<wire x1="53.34" y1="50.8" x2="50.8" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="5V" class="0">
+<segment>
+<label x="55.88" y="60.96" size="1.27" layer="95" font="vector"/>
+<pinref part="U1" gate="G$1" pin="5V"/>
+<pinref part="J4" gate="G$1" pin="4"/>
+<wire x1="25.4" y1="60.96" x2="63.5" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP11" gate="G$1" pin="3"/>
+<pinref part="SUPPLY10" gate="G$1" pin="5V"/>
+<wire x1="27.94" y1="157.48" x2="27.94" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
