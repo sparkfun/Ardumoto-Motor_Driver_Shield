@@ -23509,6 +23509,7 @@ JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
 <text x="152.4" y="177.8" size="3.175" layer="97" font="vector">Uno Pin Connection Jumpers</text>
 <text x="5.08" y="99.06" size="3.175" layer="97" font="vector">Uno R3 Connections</text>
 <wire x1="0" y1="35.56" x2="147.32" y2="35.56" width="0.2032" layer="97" style="longdash"/>
+<text x="9.144" y="140.462" size="1.778" layer="95" font="vector" align="top-left">Select logic level.</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
