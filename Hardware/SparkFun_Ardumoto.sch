@@ -23494,16 +23494,18 @@ Make sure only one source is driving any net.  JP3, JP1, JP2 and JP4 (the pin
 Vin range: 5V to 18V</text>
 <text x="238.76" y="7.62" size="2.54" layer="94" font="vector">v20</text>
 <text x="168.148" y="8.636" size="2.54" layer="94" font="vector" align="center-left">Revised by: Marshall Taylor</text>
-<text x="152.4" y="172.72" size="2.032" layer="97" font="vector" align="top-left">The folloing jumpers are used to set the ArduMoto's
+<text x="152.4" y="172.72" size="2.032" layer="97" font="vector" align="top-left">The following jumpers are used to set the ArduMoto's
   control pins to one of two possible connection
   points.
 Leave jumpers completely open if manually connecting
   control lines.
+The default PWM pins are assigned to arduino
+timer 2, while the alternate assigns them to timer 1.
 
-JP1: 'A' Direction -- set to D8 (default) or D3
-JP2: 'A' PWM signal -- set to D9 (default) or D5
-JP3: 'B' Direction -- set to D7 (default) or D2
-JP4: 'B' PWM signal -- set to D10 (default) or D6</text>
+JP1: 'A' Direction -- set to D2 (default) or D8
+JP2: 'A' PWM signal -- set to D3 (default) or D9
+JP3: 'B' Direction -- set to D4 (default) or D7
+JP4: 'B' PWM signal -- set to D11 (default) or D10</text>
 <text x="5.08" y="177.8" size="3.175" layer="97" font="vector">Power Circuits</text>
 <text x="168.148" y="11.176" size="2.54" layer="94" font="vector">Pete Dokter</text>
 <text x="152.4" y="177.8" size="3.175" layer="97" font="vector">Uno Pin Connection Jumpers</text>
