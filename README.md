@@ -13,6 +13,13 @@ Repository Contents
 * **/Firmware** - Example Arduino sketch
 * **/Hardware** - All Eagle design files (.brd, .sch)
 
+Version History
+---------------
+
+* [HW_1.4_FW_1.0](https://github.com/sparkfun/Ardumoto-Motor_Driver_Shield/tree/HW_1.4_FW_1.0) - Version 1.4
+* [V_2.0.0](https://github.com/sparkfun/Ardumoto-Motor_Driver_Shield/tree/V_2.0.0) - Initial build release
+* [V_2.0.1](https://github.com/sparkfun/Ardumoto-Motor_Driver_Shield/tree/V_2.0.1) - Public release
+
 License Information
 -------------------
 The hardware is released under [Creative Commons ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
