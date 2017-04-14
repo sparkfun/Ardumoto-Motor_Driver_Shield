@@ -1,9 +1,9 @@
 SparkFun Ardumoto - Motor Driver Shield
 =======================================
 
-![SparkFun Ardumoto - Motor Driver Shield](https://cdn.sparkfun.com//assets/parts/3/8/4/9/09815-01.jpg)
+![SparkFun Ardumoto - Motor Driver Shield](https://cdn.sparkfun.com//assets/parts/1/2/0/2/5/14129-01.jpg)
 
-[*SparkFun Ardumoto - Motor Driver Shield (DEV-09815)*](https://www.sparkfun.com/products/9815)
+[*SparkFun Ardumoto - Motor Driver Shield (DEV-14129)*](https://www.sparkfun.com/products/9815)
 
 This is a motor shield for Arduino that will control two DC motors. 
 Based on the L298 H-bridge, the SparkFun Ardumoto can drive up to 2 amps per channel. 
