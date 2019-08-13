@@ -13,6 +13,10 @@ Repository Contents
 * **/Firmware** - Example Arduino sketch
 * **/Hardware** - All Eagle design files (.brd, .sch)
 
+Documentation
+--------------
+* [Hookup Guide](https://learn.sparkfun.com/tutorials/ardumoto-kit-hookup-guide)
+
 Version History
 ---------------
 
